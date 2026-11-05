@@ -25,7 +25,7 @@ function Home() {
       <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm">
         <h2 className="text-xl font-bold">Getting Started</h2>
         <p className="mt-3 leading-7 text-slate-600">Create task groups for your school activities, personal tasks, projects, and daily responsibilities. Open a group to add tasks and update their status.</p>
-        <p className="mt-3 text-sm text-slate-500">You currently have {groups.length} task group(s).</p>
+        <p className="mt-3 text-sm font-bold text-slate-500">You currently have {groups.length} task group(s).</p>
         <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {groups.map((group) => <Link key={group.id} to={`/groups/${group.id}`} className="rounded-xl border border-slate-200 p-4 hover:border-blue-400">
             <b>{group.name}</b><p className="mt-1 text-sm text-slate-500">{group.tasks.filter((task) => !task.completed).length} pending · {group.tasks.length} total</p>
